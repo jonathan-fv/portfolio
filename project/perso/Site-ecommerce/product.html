@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d7edd5311f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Tous les produits - RedStore</title>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Logo du site">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="./index.html">Accueil</a></li>
+                        <li><a href="./product.html">Produit</a></li>
+                        <li><a href="#"> À propos</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Compte</a></li>
+                    </ul>
+                </nav>
+                <img src="./img/cart.png" alt="icone de panier">
+                <img src="./img/menu.png" alt="icone hamburger" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        <!-- End Header Section -->
+        <!-- Products -->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>Tous Les Produits</h2>
+                <select>
+                    <option>Tri par défaut</option>
+                    <option>Tri par prix</option>
+                    <option>Tri par popularité</option>
+                    <option>Tri par vente</option>
+                    <option>Tir par note</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="./img/product-1.jpg" alt="t-shirt">
+                    <h4>T-shirt Imprimé Rouge</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€10.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-2.jpg" alt=basket>
+                    <h4>Bascket Basse Noire</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€60.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-3.jpg" alt="pantalon">
+                    <h4>Pantalon Gris</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>€30.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-4.jpg" alt="polo">
+                    <h4>Polo Marine</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€15.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-5.jpg" alt="basket">
+                    <h4>Basket Haute grise claire</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€70.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-6.jpg" alt=t-shirt>
+                    <h4>T-shirt Imprimé Noir</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€10.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-7.jpg" alt="chaussettes">
+                    <h4>Chassettes</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>€5.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-8.jpg" alt="montre">
+                    <h4>Montre Fossil</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-9.jpg" alt="montre">
+                    <h4>Montre</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€70.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-10.jpg" alt=basket>
+                    <h4>Basket Basse Noir & Rouge</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€60.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-11.jpg" alt="basket">
+                    <h4>Basket Toile Grise</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>€60.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="./img/product-12.jpg" alt="pantalon">
+                    <h4>Pantalon Noir</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>€30.00</p>
+                </div>
+            </div>
+        </div>
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </div>
+        <!-- End Products -->
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Télécharger notre Application</h3>
+                        <p>Télécharger sur Android & IOS</p>
+                        <div class="app-logo">
+                            <img src="./img/play-store.png" alt="icone play-store">
+                            <img src="./img/app-store.png" alt="icone app-store">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="./img/logo-white.png" alt="logo du site">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolores dolor qui aliquam magnam! Non, perferendis.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Liens Utiles</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog</li>
+                            <li>Politique de retour</li>
+                            <li>Nous rejoindre</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Suivez-Nous</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright &copy; 2020 - Tous droits réservés</p>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

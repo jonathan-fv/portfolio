@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<meta name="format-detection" content="telephone=no" />
+    	<meta name="description" content="Mindgeek, les serveurs dédiés" />
+    	<title>Module 11 - Mindgeek - Serveurs dédiés</title>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Candal|Open+Sans" rel="stylesheet" /> 
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		 
+            <!-- You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key. 
+            Sign up for one here (it's free for small usage): 
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key. -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAUYd5WwLz7R0U4qGqckkAo8Unc7-NU1Q"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [
+                        {
+                            "featureType": "all",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "invert_lightness": true
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#426584"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#ef4322"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#12202c"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#12202c"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape.man_made",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#374f63"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#1e3141"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels",
+                            "stylers": [
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#ef4322"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "hue": "#ff2900"
+                                },
+                                {
+                                    "saturation": "52"
+                                },
+                                {
+                                    "visibility": "off"
+                                },
+                                {
+                                    "weight": "0.01"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#ef4322"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#1c2e3e"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#2e455a"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#f53d1a"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#0d1822"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#3a5974"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#0d1822"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#3a5974"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit.station",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#455664"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#12202c"
+                                }
+                            ]
+                        }
+                    ]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+	</head>
+	<body>
+		<header class="container">
+			<nav>
+				<ul class="flex-row">
+					<li id="logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="Logo Mindgeek">
+						</a>
+					</li>
+					<li><a href="mutualise.html"><i class="fa fa-users" aria-hidden="true"></i>Serveur Mutualisé</a></li>
+					<li><a href="dedie.html"><i class="fa fa-user" aria-hidden="true"></i>Serveur Dédié</a></li>
+					<li><a href="cloud.html"><i class="fa fa-cloud" aria-hidden="true"></i>Service Cloud</a></li>
+					<li><a class="active" href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<form>
+			<label for="search"></label>
+			<input id="search" class="container" type="search" placeholder="Que recherchez-vous ?" name="search">
+		</form>
+		<main class="container">
+			<section class="thumbnails-container thumbnails-contact-page-container">
+				<h2>Contactez-nous</h2>
+				<div class="flex-row">
+					<div class="thumbnail flex-column">
+						<a href="mailto:contact@3wa.fr"><i class="fa fa-paper-plane"></i></a>
+						<p>Mail :<a href="mailto:contact@3wa.fr"> contact@3wa.fr</a></p>
+					</div>
+					<div class="thumbnail flex-column">
+						<a href="#"><i class="fa fa-phone"></i></a>
+						<p>Tel :<a href="tel:+33615027893"> +33 (6) 15 02 78 93</a></p>
+					</div>
+					<div class="thumbnail flex-column">
+						<a href="#"><i class="fa fa-envelope"></i></a>
+						<address>
+							<strong>MindGeek</strong><br>
+							46 rue René Clair<br>		
+							75018 Paris
+						</address>
+					</div>
+				</div>
+			</section>
+			<section id="map"></section>
+		</main>
+		<footer>
+			<nav>
+				<ul class=" container flex-row">
+					<li><a href="#">Accueil</a></li>
+					<li><a href="mutualise.html">Serveur Mutualisé</a></li>
+					<li><a href="dedie.html">Serveur Dédié</a></li>
+					<li><a href="cloud.html">Service Cloud</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">Se connecter</a></li>
+				</ul>
+			</nav>
+			<small id="license" class="container">
+	  			<a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">
+	  				<img alt="Propriété de la 3W Academy" style="border-width:0" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png" />
+	  			</a>
+	  			<br />
+	  			<span>Cet exercice</span> de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</a>.
+	  			<br />
+	  			Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller</a>.
+			</small>
+		</footer>	
+	</body>
+</html>	

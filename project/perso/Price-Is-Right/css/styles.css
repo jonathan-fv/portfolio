@@ -1,0 +1,23 @@
+body{
+    background: #333;
+}
+header{
+    font-size: 35px;
+    color: #fff
+}
+.plus, .moins, .fini{
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.plus{
+    background: rgb(245, 67, 67);
+}
+.moins{
+    background: rgb(238, 172, 51);
+}
+.fini{
+    background: rgb(77, 201, 77);
+}

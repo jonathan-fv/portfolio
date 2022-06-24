@@ -1,0 +1,113 @@
+/* NavBar Section */
+.navbar-brand img{
+    max-height: 40px; 
+}
+/* End NavBar Section */
+/* Header Section */
+header .row{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 80vh;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+header .formReservation{
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 80vh;
+}
+header h1{
+    font-family: 'Raleway', sans-serif;
+}
+header h2{
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 50px;
+}
+header .slogan{
+    display: flex;
+    min-height: 80vh;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+/* End Header Section */
+/* Offers Section */
+#presentation .media span{
+    color: #d7b841;
+    font-size: 3rem;
+    width: 4rem;
+    text-align: center;
+}
+#presentation .media{
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+#presentation .media:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+/* End Offers Section */
+/* Comments Section */
+.fondChambre{
+    min-height: calc(100vh - 50px);
+    background-image: url(../img/comments.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.avisClient{
+    min-height: calc(100vh - 50px);
+    background-color: #d3dae4;
+}
+.avisClient span{
+    font-size: 5rem;
+    color: #17a2b3;
+}
+.avisClient h5{
+    font-size: 2.5rem;
+    color: #888;
+}
+/* End Comments Section */
+/* Contact Section */
+#contact{
+    min-height: calc(100vh - 50px);
+    background-image: url(../img/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#contact .row{
+    min-height: calc(100vh - 50px);
+}
+.formContact{
+    background-color: rgba(255, 255, 255, .7);
+    padding: 2rem 1rem;
+}
+/* End Contact Section */
+/* Footer Section */
+footer{
+    background-color: rgba(0, 0, 0, .8);
+    color: #999;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+footer a{
+    color: #999;
+    font-size: 2rem;
+    transition: all .2s ease-in-out;
+}
+footer a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+/* End Footer Section */
+
+
+/* Responsive CSS */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    header .slogan{
+        display: none;
+    }
+}
